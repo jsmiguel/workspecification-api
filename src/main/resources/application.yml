@@ -1,0 +1,17 @@
+springdoc:
+  default-consumes-media-type: application/json
+  default-produces-media-type: application/json
+  group-configs:
+      - group: v1
+        packages-to-scan: com.telus.workforcemgmt.workspecification.rest.v1
+  swagger-ui:
+    path: /docs
+    doc-expansion: list
+    operationsSorter: alpha
+    supportedSubmitMethods: []
+spring:
+  r2dbc:
+    url: jdbc:postgresql://localhost:5432/work-specification
+    username: [REPLACE_HERE]
+    password: [REPLACE_HERE]
+    initialization-mode: always
